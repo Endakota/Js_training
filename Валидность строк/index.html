@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #3b3a3a;
+        }
+        .form{
+            background-color: #8f8c8c;
+            border-radius: 40px;
+            border: 10px solid white;
+            color: white;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #emailInput, #passInput{
+            background-color: #3d3c3c;
+            height: 20px;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1) наличие @ V
+    2) после [@ domain . com] V
+    3) не должно быть короче 4 символов V 
+    4) она не должна начинаться с цифры 
+    5) не было пробелов V--> 
+    
+    <!-- 1) проверка на отсуствие пробелов
+    2) минимальная длина 8 символов
+    3)  -->
+    <div class="form">
+        <h1>Login Page</h1>
+        <div class="email">
+            <label for="emailInput">Введите email</label>
+            <br>
+            <input type="text" id = "emailInput" required>
+        </div>
+        <div class="password"> 
+            <label for="passInput">Введите пароль</label>
+            <br>
+            <input type="password" id = "passInput" required>
+        </div>
+        <button type="submit" class = "submit">Submit</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
